@@ -3,7 +3,7 @@ import openai
 import pandas as pd
 import os
 
-openai.api_key = os.getenv("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")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(page_title="Chatbot Risiko Proyek", layout="wide")
 st.title("🤖 Chatbot Interaktif: Identifikasi Risiko Proyek")
