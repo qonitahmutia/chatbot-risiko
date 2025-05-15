@@ -5,6 +5,10 @@ import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+if not openai.api_key:
+    st.error("❌ API Key tidak terbaca. Pastikan disimpan di Secrets.")
+    st.stop()
+
 st.set_page_config(page_title="Chatbot Risiko Proyek", layout="wide")
 st.title("🤖 Chatbot Interaktif: Identifikasi Risiko Proyek")
 
